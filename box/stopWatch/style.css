@@ -1,0 +1,36 @@
+body{
+    height: 100%;
+    background-color: black;
+}
+.containers{
+    max-width: 800px;
+    text-align: center;
+    margin: 30px auto;
+    
+}
+.containers p {
+    color: white;
+    font-weight: 100;
+    font-size: 2.6rem;
+}
+#minute,
+#seconds,
+#doil{
+    font-size: 2rem;
+}
+button{
+    width: 150px;
+    height: 50px;
+    background: black;
+    color:white;
+    margin-right: 10px;
+    outline: none;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+button:hover{
+    background: white;
+    color: black;
+    font-weight: 800;
+    text-transform: capitalize;
+}
