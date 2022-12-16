@@ -1,0 +1,29 @@
+<html>
+    <body>
+        <button id="myButton" type="button" onclick="buttonClick()"><p id="gg" onclick="textRandomColor()">Random color generator</p></button>
+        <script>
+            const bodyEl = document.getElementsByTagName('body')
+            const myButtonEl = document.getElementById('myButton')
+            const ggEl = document.getElementById('gg')
+            
+            function buttonClick(){
+                let color , chagt
+                 color = '0123456789ABCDEF'
+                 chagt = '#'
+                for (let i = 0; i<6 ;i++){
+                    chagt = chagt + color[Math.floor(Math.random()*16)]
+                }
+                document.body.style.backgroundColor = chagt
+            }
+            function textRandomColor(){
+                let color , chagt
+                 color = '0123456789ABCDEF'
+                 chagt = '#'
+                for (let i = 0; i<6 ;i++){
+                    chagt = chagt + color[Math.floor(Math.random()*16)]
+                }
+                ggEl.style.color = chagt
+            }
+        </script>
+    </body>
+</html>

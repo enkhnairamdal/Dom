@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <button id="myBtn" type="button" onclick="gg()">Click to paragraph background color</button>
+        <h1 id="red">Click to Set background color</h1>
+        <h1 id ="yellow">Click to Change another color</h1>
+        <script>
+          const myButton = document.getElementById('myBtn')
+          const clickRed = document.getElementById('red')
+          const clickYellow = document.getElementById('yellow')
+          function gg (){
+            clickRed.style = "background-color: red "
+            clickYellow.style = "background-color: yellow "
+          }
+          myButton.addEventListener("click",gg)
+
+          
+        </script>
+    </body>
+</html>
