@@ -1,75 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link rel="stylesheet" href="style.css">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="containers">
-        <p> <span id="minute">00</span>:<span id="seconds">00</span>:<span id="doil">00</span>
-        </p>
-        <button id="button-start">Start</button>
-        <button id="button-stop">Stop</button>
-        <button id="button-reset">Reset</button>
+      <p>
+        <span id="minute">00</span>:<span id="seconds">00</span>:<span id="doil"
+          >00</span
+        >
+      </p>
+      <button id="button-start">Start</button>
+      <button id="button-stop">Stop</button>
+      <button id="button-reset">Reset</button>
     </div>
     <script>
-        let minute =00;
-        let seconds = 00;
-        let doil = 00;
-        let appendDoil =document.getElementById('doil')
-        let appendSeconds =document.getElementById('seconds')
-        let appendMinute =document.getElementById('minute')
-        let buttonStart = document.getElementById('button-start')
-        let buttonStop = document.getElementById('button-stop')
-        let buttonReset = document.getElementById('button-reset')
-        let interval;
+      let minute = 00;
+      let seconds = 00;
+      let doil = 00;
+      let appendDoil = document.getElementById("doil");
+      let appendSeconds = document.getElementById("seconds");
+      let appendMinute = document.getElementById("minute");
+      let buttonStart = document.getElementById("button-start");
+      let buttonStop = document.getElementById("button-stop");
+      let buttonReset = document.getElementById("button-reset");
+      let interval;
 
+      function startTimer() {
+        doil++;
 
-        function startTimer(){
-            doil++
-
-            if(doil<9){
-                appendDoil.innerHTML= "0" + doil;
-            }
-            if(doil > 9){
-                appendDoil.innerHTML = doil;
-            }
-            if(doil>99){
-                seconds++
-
-                appendSeconds.innerHTML = "0" + seconds
-                doil = 0;
-                appendDoil.innerHTML = "0" + 0;
-            }
-            if(seconds>9){
-                appendSeconds.innerHTML = seconds;
-            }
-            if(seconds>59){
-                minute++
-                appendMinute.innerHTML = "0"+ minute
-                seconds=0;
-                appendSeconds.innerHTML = "0"+0
-            }
+        if (doil < 9) {
+          appendDoil.innerHTML = "0" + doil;
         }
+        if (doil > 9) {
+          appendDoil.innerHTML = doil;
+        }
+        if (doil > 99) {
+          seconds++;
 
-        buttonStart.onclick = function(){
-            interval = setInterval(startTimer);
+          appendSeconds.innerHTML = "0" + seconds;
+          doil = 0;
+          appendDoil.innerHTML = "0" + 0;
         }
-        buttonStop.onclick = function(){
-            clearInterval(interval)
+        if (seconds > 9) {
+          appendSeconds.innerHTML = seconds;
         }
-        buttonReset.onclick = function(){
-            clearInterval(interval)
-            doil="00"
-            seconds="00"
-            minute="00"
-            appendDoil.innerHTML= doil
-            appendSeconds.innerHTML=seconds
-            appendMinute.innerHTML= minute
+        if (seconds > 59) {
+          minute++;
+          appendMinute.innerHTML = "0" + minute;
+          seconds = 0;
+          appendSeconds.innerHTML = "0" + 0;
         }
+      }
+
+      buttonStart.onclick = function () {
+        interval = setInterval(startTimer, 10);
+      };
+      buttonStop.onclick = function () {
+        clearInterval(interval);
+      };
+      buttonReset.onclick = function () {
+        clearInterval(interval);
+        doil = "00";
+        seconds = "00";
+        minute = "00";
+        appendDoil.innerHTML = doil;
+        appendSeconds.innerHTML = seconds;
+        appendMinute.innerHTML = minute;
+      };
     </script>
-</body>
+  </body>
 </html>
