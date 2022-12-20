@@ -1,0 +1,24 @@
+<html>
+  <body>
+    <form>
+      <select id="colorSelect">
+        <option>Red</option>
+        <option>Green</option>
+        <option>White</option>
+        <option>Black</option>
+      </select>
+      <input type="button" value="Select and Remove" id="removeButton" />
+    </form>
+    <script>
+      let colorEl = document.getElementById("colorSelect");
+      let removeButtonEl = document.getElementById("removeButton");
+      let x = document.getElementById("colorSelect").selectedIndex;
+      let text = "No. of items:";
+      alert("No. of items:" + colorEl.length + "\n" + colorEl.innerText);
+      removeButtonEl.onclick = function remove() {
+        colorEl.remove(colorEl.selectedIndex);
+        alert(text + colorEl.length + "\n" + colorEl.innerText);
+      };
+    </script>
+  </body>
+</html>
