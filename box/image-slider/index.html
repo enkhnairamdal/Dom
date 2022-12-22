@@ -1,0 +1,72 @@
+<html>
+  <style>
+    body {
+      background-color: gainsboro;
+    }
+    div {
+      width: 1200px;
+      height: 500px;
+      margin: 0 auto;
+    }
+    img {
+      border-radius: 20px;
+      margin-left: 15px;
+      transition: 0.5s linear;
+    }
+  </style>
+  <body>
+    <div>
+      <img id="image1" src="image/1.jpg" width="500px" height="400px" />
+
+      <img id="image2" src="image/2.jpg" width="120px" height="400px" />
+
+      <img id="image3" src="image/3.jpg" width="120px" height="400px" />
+
+      <img id="image4" src="image/4.jpg" width="120px" height="400px" />
+
+      <img id="image5" src="image/5.jpg" width="120px" height="400px" />
+    </div>
+    <script>
+      let imageEl1 = document.getElementById("image1");
+      let imageEl2 = document.getElementById("image2");
+      let imageEl3 = document.getElementById("image3");
+      let imageEl4 = document.getElementById("image4");
+      let imageEl5 = document.getElementById("image5");
+      imageEl1.onclick = function () {
+        imageEl2.style.width = "120px";
+        imageEl1.style.width = "500px";
+        imageEl3.style.width = "120px";
+        imageEl4.style.width = "120px";
+        imageEl5.style.width = "120px";
+      };
+      imageEl2.onclick = function () {
+        imageEl2.style.width = "500px";
+        imageEl1.style.width = "120px";
+        imageEl3.style.width = "120px";
+        imageEl4.style.width = "120px";
+        imageEl5.style.width = "120px";
+      };
+      imageEl3.onclick = function () {
+        imageEl3.style.width = "500px";
+        imageEl2.style.width = "120px";
+        imageEl1.style.width = "120px";
+        imageEl4.style.width = "120px";
+        imageEl5.style.width = "120px";
+      };
+      imageEl4.onclick = function () {
+        imageEl4.style.width = "500px";
+        imageEl3.style.width = "120px";
+        imageEl1.style.width = "120px";
+        imageEl2.style.width = "120px";
+        imageEl5.style.width = "120px";
+      };
+      imageEl5.onclick = function () {
+        imageEl5.style.width = "500px";
+        imageEl4.style.width = "120px";
+        imageEl1.style.width = "120px";
+        imageEl2.style.width = "120px";
+        imageEl3.style.width = "120px";
+      };
+    </script>
+  </body>
+</html>
